@@ -95,12 +95,12 @@
       websocket.onclose = (event) => {
         if (event.code === 1000) {
           receiving = false;
-          sendButton.textContent = "Ask Dom!";
+          sendButton.textContent = "Ask ME!";
         } else {
           messageElement.textContent += "Error getting response from server. Refresh the page and try again.";
           chatbox.scrollTop = chatbox.scrollHeight;
           receiving = false;
-          sendButton.textContent = "Ask Dom!";
+          sendButton.textContent = "Ask ME!";
         }
       };
     }
@@ -123,7 +123,7 @@
       } else if (receiving && websocket) {
         websocket.close(1000);
         receiving = false;
-        sendButton.textContent = "Ask Dom!";
+        sendButton.textContent = "Ask ME!";
       }
     });
 
